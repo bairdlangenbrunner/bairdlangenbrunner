@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--gray-dark);
+}
+
+:root {
+  /* --gray-dark: #002b36; */
+  --gray-dark: #000;
+  --gray-medium: #586e75;
+  --background-color: #fff;
+  --orange: #cb4b16;
+}
+
+.nav-bar {
+  /* position: sticky; */
+  font-size: 1.1em;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+
+}
+.nav-bar a {
+  cursor: pointer;
+  color: var(--gray-dark);
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+  /* color: var(--gray-medium); */
+  text-shadow: -5px 0px var(--orange);
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  font-size: 16px;
+  max-width: 80%;
+  height: 95vh;
+  margin: 5px auto;
+  /* overflow: hidden; */
+  border: solid var(--gray-dark) 2px;
+  /* background-color: pink; */
+}
+
+footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.8em;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+p a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+p a:hover {
+  color: var(--gray-dark);
+}
+
+h1.header-text {
+  font-size: 8.8em;
+  overflow-wrap: break-word;
+  font-weight: normal;
+  line-height: 0.87em;
+}
+
+.header-div {
+  margin: auto;
+  margin-top: 60px;
+  /* display: flex; */
+  /* margin-top: 10px; */
+  width: 80%;
+  /* background-color: pink; */
+  /* justify-content: center; */
+}
+
+.text-div {
+  margin: auto;
+  margin-top: 20px;
+  width: 80%;
+}
+/* .horizontal-line {
+  display: none;
+  height: 2px;
+  width: 100vw;
+  background-color: var(--gray-dark);
+} */
+
+@media screen and (max-width: 768px) {
+  h1.header-text {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h1.header-text {
+    font-size: 1.15em;
+    text-align: center;
+  }
+  .header-div {
+    margin-top: 10px;
+  }
+  .page-container {
+    border: none;
+    max-width: 100%;
+    height: none;
+  }
+  .nav-bar {
+    font-size: 0.9rem;
+    position: sticky;
+  }
+  .nav-bar ul {
+    justify-content: center;
+  }
+}
