@@ -18,6 +18,7 @@
 .nav-bar {
   /* position: sticky; */
   font-size: 1.1rem;
+
 }
 
 .nav-bar ul {
@@ -178,6 +179,7 @@ h1.header-text {
     border: none;
     max-width: 100%;
     margin-top: 0;
+    height: 100vh;
   }
   .homolosine {
     /* transform: rotate(90deg); */
@@ -193,6 +195,7 @@ h1.header-text {
     padding-top: 10px;
   }
   footer {
-    font-size: 0.666rem;
+    font-size: 0.85rem;
+    justify-content: center;
   }
 }
