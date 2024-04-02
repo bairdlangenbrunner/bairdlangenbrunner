@@ -2,6 +2,8 @@
 ### Hi there 👋
 -->
 
+Visit my personal website [here](https://bairdlangenbrunner.com/).
+
 <!--
 **bairdlangenbrunner/bairdlangenbrunner** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
