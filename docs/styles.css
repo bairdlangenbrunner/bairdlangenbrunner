@@ -111,6 +111,23 @@ h1.header-text {
   padding-top: 10px;
 }
 
+.text-div ul li {
+  list-style: none;
+  /* margin-left: 0; */
+  /* padding-left: 2rem; */
+  /* text-indent: 1rem; */
+}
+
+.text-div ul li:not(:first-child) {
+  padding-top: 5px;
+}
+
+.text-div ul li:before {
+    content: "+";
+    padding-right: 0.5em;
+    /* padding-left: 0rem */
+  }
+
 /* .horizontal-line {
   display: none;
   height: 2px;
@@ -141,12 +158,14 @@ h1.header-text {
     text-shadow: none;
   }
   h1.header-text {
-    font-size: 8.51vw;
-    text-align: center;
+    font-size: 1.82rem;
+    /* text-align: center; */
     /* display: none; */
   }
   .header-div {
     margin-top: 10px;
+    margin-bottom: 5px;
+    width: 90vw;
   }
   .page-container {
     border: none;
@@ -161,9 +180,10 @@ h1.header-text {
     /* transform: rotate(90deg); */
     width: 90%;
   }
-  .text-div p {
+  .text-div {
     font-size: 0.9rem;
-  }
+  } /*  gets all p and li elements */ 
+  
   .text-div {
     /* background-color: pink; */
     width: 90%;

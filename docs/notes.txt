@@ -1,0 +1,4 @@
+ssh -p 65002 u381663177@82.180.172.10
+
+scp -P 65002 * u381663177@82.180.172.10:/home/u381663177/public_html
+pwd is the regular one
