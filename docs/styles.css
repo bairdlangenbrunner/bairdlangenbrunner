@@ -149,15 +149,23 @@ h1.header-text {
   .nav-bar {
     background-color: magenta;
   }
+
+  .nav-bar a {
+    color: #fff;
+  }
   .nav-bar a:hover {
-    color:yellow;
+    color:#000;
     text-shadow: none;
   }
-  h1.header-text {
-    font-size: 1.82rem;
-    color: #000;
-    -webkit-text-stroke: unset;
+  h1.header-text#header-text-home {
+    /* font-size: 1.82rem; */
+    /* color: #000; */
+    /* -webkit-text-stroke: unset; */
+    /* font-size: 3.5rem; */
+    /* overflow-wrap: normal; */
+    display: none;
   }
+
   .header-div {
     margin-top: 10px;
     margin-bottom: 5px;
