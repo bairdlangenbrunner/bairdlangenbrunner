@@ -52,7 +52,6 @@
   font-size: 16px;
   max-width: 80%;
   min-height: 90vh;
-  /* height: 95vh; */
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -70,12 +69,12 @@ footer {
   padding-top: 30px;
 }
 
-p > a {
+a {
   color: magenta;
   text-decoration: none;
 }
 
-p > a:hover {
+a:hover {
   color: var(--gray-dark);
 }
 
@@ -108,6 +107,10 @@ h1.header-text {
   padding-top: 10px;
 }
 
+.text-div ul {
+  padding-top: 10px;
+}
+
 /* .horizontal-line {
   display: none;
   height: 2px;
@@ -117,10 +120,8 @@ h1.header-text {
 
 .homolosine{
   margin: auto;
-  /* position: relative; */
   margin-top: 0;
   width: 80%;
-  /* height: 100%; */
   /* background-color: yellow; */
 }
 /* https://stackoverflow.com/questions/18434094/how-to-style-svg-with-external-css */
@@ -142,7 +143,7 @@ h1.header-text {
   h1.header-text {
     font-size: 8.51vw;
     text-align: center;
-    display: none;
+    /* display: none; */
   }
   .header-div {
     margin-top: 10px;
