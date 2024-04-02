@@ -121,11 +121,11 @@ svg {
 
 @media screen and (max-width: 768px) {
   h1.header-text {
-    font-size: 3.5rem;
+    font-size: 4.46rem;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
   .nav-bar {
     background-color: magenta;
   }
@@ -144,7 +144,6 @@ svg {
   .page-container {
     border: none;
     max-width: 100%;
-    height: none;
   }
   .nav-bar {
     font-size: 0.9rem;
