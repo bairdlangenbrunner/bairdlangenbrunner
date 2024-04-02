@@ -17,7 +17,7 @@
 
 .nav-bar {
   /* position: sticky; */
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
 .nav-bar ul {
@@ -41,24 +41,28 @@
   text-shadow: -4px 0px magenta, -5.5px 0px yellow, -7px 0px cyan;
 }
 
+.nav-bar a:current {
+  color: yellow;
+}
+
 .page-container {
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
   font-size: 16px;
   max-width: 80%;
-  height: 95vh;
-  margin: 5px auto;
-  /* overflow: hidden; */
+  /* height: 95vh; */
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin: auto;
   border: solid magenta 2px;
-  /* background-color: pink; */
 }
 
 footer {
   margin-top: auto;
   display: flex;
   justify-content: flex-end;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   padding-right: 10px;
   padding-bottom: 5px;
 }
@@ -73,29 +77,39 @@ p a:hover {
 }
 
 h1.header-text {
-  font-size: 8.8em;
+  font-size: 8rem;
   overflow-wrap: break-word;
   font-weight: normal;
   line-height: 0.87em;
   /* background-color: cyan; */
-  padding-bottom: 0.15em
+  padding-bottom: 0.15rem
 }
 
 .header-div {
   margin: auto;
   margin-bottom: 0;
-  /* margin-top: 60px; */
-  /* display: flex; */
-  /* margin-top: 10px; */
+  margin-top: 33px;
   width: 80%;
 }
 
 .text-div {
-  display: none;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 0px;
   width: 80%;
 }
+
+.text-div p {
+  padding-top: 10px;
+}
+
+.text-div#text-home {
+  display: none;
+}
+
+/* .text-div p:not(:first-child) {
+  padding-top: 10px;
+} */
+
 /* .horizontal-line {
   display: none;
   height: 2px;
@@ -113,15 +127,9 @@ h1.header-text {
 }
 /* https://stackoverflow.com/questions/18434094/how-to-style-svg-with-external-css */
 
-svg {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
 @media screen and (max-width: 768px) {
   h1.header-text {
-    font-size: 4.46rem;
+    font-size: 5.52rem;
   }
 }
 
@@ -157,5 +165,13 @@ svg {
     margin: auto;
     margin-top: 0; */
     width: 90%;
+  }
+  .text-div p {
+    font-size: 0.9rem;
+  }
+  .text-div {
+    /* background-color: pink; */
+    width: 90%;
+
   }
 }
