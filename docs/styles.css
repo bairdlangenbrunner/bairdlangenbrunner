@@ -148,6 +148,8 @@ h1.header-text {
 @media screen and (max-width: 480px) {
   .nav-bar {
     background-color: magenta;
+    position: sticky;
+    top: 0; left: 0;
   }
 
   .nav-bar a {
@@ -174,6 +176,7 @@ h1.header-text {
   .page-container {
     border: none;
     max-width: 100%;
+    margin-top: 0;
   }
   .nav-bar {
     font-size: 0.9rem;
