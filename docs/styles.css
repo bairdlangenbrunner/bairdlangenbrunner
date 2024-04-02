@@ -38,7 +38,7 @@
 
 .nav-bar a:hover {
   /* color: var(--gray-medium); */
-  text-shadow: -5px 0px var(--orange);
+  text-shadow: -4px 0px magenta, -5.5px 0px yellow, -7px 0px cyan;
 }
 
 .page-container {
@@ -50,7 +50,7 @@
   height: 95vh;
   margin: 5px auto;
   /* overflow: hidden; */
-  border: solid var(--gray-dark) 2px;
+  border: solid magenta 2px;
   /* background-color: pink; */
 }
 
@@ -64,7 +64,7 @@ footer {
 }
 
 p a {
-  color: var(--orange);
+  color: magenta;
   text-decoration: none;
 }
 
@@ -77,19 +77,21 @@ h1.header-text {
   overflow-wrap: break-word;
   font-weight: normal;
   line-height: 0.87em;
+  /* background-color: cyan; */
+  padding-bottom: 0.15em
 }
 
 .header-div {
   margin: auto;
-  margin-top: 60px;
+  margin-bottom: 0;
+  /* margin-top: 60px; */
   /* display: flex; */
   /* margin-top: 10px; */
   width: 80%;
-  /* background-color: pink; */
-  /* justify-content: center; */
 }
 
 .text-div {
+  display: none;
   margin: auto;
   margin-top: 20px;
   width: 80%;
@@ -101,6 +103,22 @@ h1.header-text {
   background-color: var(--gray-dark);
 } */
 
+.homolosine{
+  margin: auto;
+  /* position: relative; */
+  margin-top: 0;
+  width: 80%;
+  /* height: 100%; */
+  /* background-color: yellow; */
+}
+/* https://stackoverflow.com/questions/18434094/how-to-style-svg-with-external-css */
+
+svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
   h1.header-text {
     font-size: 3.5rem;
@@ -108,9 +126,17 @@ h1.header-text {
 }
 
 @media screen and (max-width: 320px) {
+  .nav-bar {
+    background-color: magenta;
+  }
+  .nav-bar a:hover {
+    color:yellow;
+    text-shadow: none;
+  }
   h1.header-text {
-    font-size: 1.15em;
+    font-size: 8.51vw;
     text-align: center;
+    display: none;
   }
   .header-div {
     margin-top: 10px;
@@ -122,9 +148,15 @@ h1.header-text {
   }
   .nav-bar {
     font-size: 0.9rem;
-    position: sticky;
+    /* position: sticky; */
   }
   .nav-bar ul {
-    justify-content: center;
+    /* justify-content: center; */
+  }
+  .homolosine {
+    /* transform: rotate(90deg);
+    margin: auto;
+    margin-top: 0; */
+    width: 90%;
   }
 }
