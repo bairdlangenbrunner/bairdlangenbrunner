@@ -84,6 +84,8 @@ h1.header-text {
   font-weight: normal;
   line-height: 0.87em;
   /* background-color: cyan; */
+  color: #fff;
+  -webkit-text-stroke: 2px #000;
 }
 
 .header-div {
@@ -97,22 +99,16 @@ h1.header-text {
   margin: auto;
   margin-top: 0px;
   width: 80%;
-}
-
-.text-div#text-home {
-  display: none;
+  /* background-color: pink; */
 }
 
 .text-div p:not(:first-child) {
   padding-top: 10px;
 }
 
-.text-div ul {
-  padding-top: 10px;
-}
-
 .text-div ul li {
   list-style: none;
+  padding: 0;
   /* margin-left: 0; */
   /* padding-left: 2rem; */
   /* text-indent: 1rem; */
@@ -159,8 +155,8 @@ h1.header-text {
   }
   h1.header-text {
     font-size: 1.82rem;
-    /* text-align: center; */
-    /* display: none; */
+    color: #000;
+    -webkit-text-stroke: unset;
   }
   .header-div {
     margin-top: 10px;
@@ -173,8 +169,6 @@ h1.header-text {
   }
   .nav-bar {
     font-size: 0.9rem;
-    /* position: sticky; */
-    /* background: linear-gradient(0deg, cyan 0, cyan 33.32%, magenta 33.33%, magenta 66.66%, cyan 66.67%, cyan 100%) */
   }
   .homolosine {
     /* transform: rotate(90deg); */
@@ -187,6 +181,7 @@ h1.header-text {
   .text-div {
     /* background-color: pink; */
     width: 90%;
+    padding-top: 10px;
   }
   footer {
     font-size: 0.666rem;
