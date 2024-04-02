@@ -149,7 +149,8 @@ h1.header-text {
   .nav-bar {
     background-color: magenta;
     position: sticky;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
   }
 
   .nav-bar a {
@@ -178,16 +179,13 @@ h1.header-text {
     max-width: 100%;
     margin-top: 0;
   }
-  .nav-bar {
-    font-size: 0.9rem;
-  }
   .homolosine {
     /* transform: rotate(90deg); */
     width: 90%;
   }
-  .text-div {
-    font-size: 0.9rem;
-  } /*  gets all p and li elements */ 
+  /* .text-div { */
+    /* font-size: 0.9rem; */
+  /* }  gets all p and li elements  */
   
   .text-div {
     /* background-color: pink; */
