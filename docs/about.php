@@ -1,35 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
+  <head>
+    <?php include('head.html')?>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>baird langenbrunner</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-</head>
-
-  
   <body>
     <div class="page-container">
-
+      
       <div class="nav-bar-div">
         <nav class="nav-bar">
-          <div class="nav-bar-ul-div">
-          <ul>
-            <li><a href="index.html" id="home">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="projects.html">projects</a></li>
-          </ul>
-          </div>
+          <?php include('nav-bar.html')?>
         </nav>
       </div>
 
-      <!-- <div class="horizontal-line"></div> -->
       <div class="header-div">
       <h1 class="header-text">about</h1>
       </div>
@@ -45,9 +29,7 @@
       </div>
 
       <div class="footer-div">
-      <footer>
-          <p>this site is maintained on github <a href="https://github.com/bairdlangenbrunner/bairdlangenbrunner">here</a></p>
-      </footer>
+        <?php include('footer.html')?>
       </div>
 
     </div>
