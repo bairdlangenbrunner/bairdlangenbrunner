@@ -107,7 +107,7 @@ h1.header-text {
 }
 
 .text-div p:not(:first-child) {
-  padding-top: 10px;
+  padding-top: 0.9rem;
 }
 
 .text-div ul li {
