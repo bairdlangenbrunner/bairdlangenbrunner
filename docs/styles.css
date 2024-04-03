@@ -15,6 +15,7 @@
   --orange: #cb4b16;
 }
 
+/* NAV BAR  */
 .nav-bar-div {
   /* position: sticky; */
   font-size: 1.1rem;
@@ -47,6 +48,8 @@
   color: yellow;
 }
 
+/* BIG PAGE CONTAINER
+ */
 .page-container {
   display: flex;
   flex-direction: column;
@@ -62,6 +65,7 @@
   /* background-color: pink; */
 }
 
+/* FOOTER SHIT */
 .footer-div {
   margin-top: auto;
   display: flex;
@@ -74,6 +78,7 @@
   /* background-color: pink; */
 }
 
+/* LINKS */
 a {
   color: magenta;
   text-decoration: none;
@@ -83,11 +88,14 @@ a:hover {
   color: var(--gray-dark);
 }
 
+/* HEADING/TITLES ON PAGES */
+
 h1.header-text {
-  font-size: 8rem;
+  font-size: 10rem;
   overflow-wrap: break-word;
   font-weight: normal;
   line-height: 0.87em;
+  letter-spacing: -0.75rem;
   /* background-color: cyan; */
   /* color: #fff; */
   color: transparent;
@@ -102,6 +110,7 @@ h1.header-text {
   position: relative;
 }
 
+/* TEXT DIVS AND LISTS */
 .text-div {
   margin: auto;
   margin-top: 0px;
@@ -131,7 +140,6 @@ h1.header-text {
     padding-right: 0.5em;
     /* padding-left: 0rem */
   }
-
 
 /* HOMOLOSINE STUFF */
 
@@ -189,7 +197,7 @@ h1.header-text {
 
 @media screen and (max-width: 768px) {
   h1.header-text {
-    font-size: 5.52rem;
+    font-size: 7rem;
   }
 }
 
