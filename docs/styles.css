@@ -203,7 +203,7 @@ h1.header-text {
 
 @media screen and (max-width: 480px) {
   .nav-bar-div {
-    background-color: magenta;
+    background-color: #000;
     top: 0;
     left: 0;
     position: fixed;
@@ -220,7 +220,7 @@ h1.header-text {
     color: #fff;
   }
   .nav-bar a:hover {
-    color:#000;
+    color: magenta;
     text-shadow: none;
   }
   h1.header-text#header-text-home {
