@@ -2,7 +2,7 @@
 ### Hi there 👋
 -->
 
-This is the GitHub repository for my personal website. You can visit that [here](https://bairdlangenbrunner.com/).
+I maintain a personal website [here](https://bairdlangenbrunner.com/).
 
 <!--
 **bairdlangenbrunner/bairdlangenbrunner** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
