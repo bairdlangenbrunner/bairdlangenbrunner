@@ -3,6 +3,9 @@ import {
   QuestionMarkCircleIcon,
   WrenchScrewdriverIcon,
   CloudIcon,
+  UserCircleIcon,
+  FolderIcon,
+  PencilSquareIcon,
 } from "@heroicons/react/24/outline";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -23,7 +26,7 @@ function Header() {
           <li>
             <Link to="/about">
               <div className="hover-bubble">
-                <QuestionMarkCircleIcon className="header-icons" />
+                <UserCircleIcon className="header-icons" />
                 <span class="hover-bubble-text left-[-6.5%] hidden">about</span>
               </div>
             </Link>
@@ -31,7 +34,7 @@ function Header() {
           <li>
             <Link to="/projects">
               <div className="hover-bubble">
-                <WrenchScrewdriverIcon className="header-icons" />
+                <FolderIcon className="header-icons" />
                 <span class="hover-bubble-text left-[-25%] hidden">projects</span>
               </div>
             </Link>
@@ -39,7 +42,7 @@ function Header() {
           <li>
             <Link to="https://isthisinteresting.bairdlangenbrunner.com">
               <div className="hover-bubble">
-                <CloudIcon className="header-icons" />
+                <PencilSquareIcon className="header-icons" />
                 <span class="hover-bubble-text left-[-50%] hidden">interesting</span>
               </div>
             </Link>

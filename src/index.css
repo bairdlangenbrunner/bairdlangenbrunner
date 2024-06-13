@@ -43,7 +43,7 @@
     /* @apply items-center; */
     @apply text-sm;
     @apply text-right;
-    @apply pr-[20px];
+    @apply pr-[15px];
     @apply pb-[15px];
     @apply text-neutral-900;
   }
@@ -58,11 +58,11 @@
   .header-content {
     @apply flex;
     @apply pt-[10px];
-    @apply sm:pt-[25px];
+    @apply sm:pt-[15px];
     @apply pr-[15px];
-    @apply sm:pr-[35px];
+    @apply sm:pr-[15px];
     @apply gap-[13px];
-    @apply sm:gap-[20px];
+    @apply sm:gap-[15px];
     /* @apply sm:text-lg; */
   }
 
