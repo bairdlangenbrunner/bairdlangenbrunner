@@ -6,8 +6,8 @@ export default {
   ],
   theme: {
     fontFamily: {
-      sans: ["Roboto", "sans-serif"],
-      serif: ["Lora", "Georgia", "serif"],
+      sans: ["'Open Sans'", "Helvetica", "sans-serif"],
+      serif: ["Domine", "Georgia", "serif"],
     },
     extend: {},
   },

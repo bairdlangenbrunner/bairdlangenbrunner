@@ -6,14 +6,16 @@ import Header from '../components/Header/Header'
 function Home() {
   return (
     <>
-    <section className="page-container">
+    <div className="page-outline-div">
+      <div className="page-content-div">
       <Header />
-      <div className="title-div">
+      <section className="title-section">
         <h1 className="title-home">Baird Langenbrunner</h1>
-      </div>
+      </section>
       <Homolosines />
       <Footer />
-    </section>
+      </div>
+    </div>
     </>
   )
 }

@@ -4,14 +4,18 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <div className="footer-div">
-        <footer className="footer-content">
-          <p>
-            this site is maintained on github <a href="https://github.com/bairdlangenbrunner/bairdlangenbrunner" target="_blank">here</a>
-          </p>
-          
-        </footer>
-      </div>
+      <footer className="footer-div">
+        <section className="footer-content">
+          this site is maintained on github{" "}
+          <Link
+            to="https://github.com/bairdlangenbrunner/bairdlangenbrunner"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            here
+          </Link>
+        </section>
+      </footer>
     </>
   );
 }
