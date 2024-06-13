@@ -1,0 +1,74 @@
+follow along here:
+https://tailwindcss.com/docs/guides/vite
+
+npm create vite@latest bairdlangenbrunner -- --template react
+cd my-project
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+
+
+set up pages/About.jsx, Home.jsx, Projects.jsx
+set up components/Header.jsx, Footer.jsx
+
+****************************************
+
+download react router dom
+npm install react-router-dom
+
+then in main.jsx, import
+import {BrowserRouter} from "react-router-dom"
+
+and add around App /
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+)
+
+****************************************
+
+then also in App.jsx, create ul
+
+import { useState } from 'react'
+import Home from './pages/Home'
+import {Link, Route, Routes} from "react-router-dom"
+import About from './pages/About'
+import Projects from './pages/Projects'
+
+function App() {
+  return (
+    <>
+      <nav className="hidden">
+        <ul>
+          <li>
+            <Link to="/">home</Link>
+          </li>
+          <li>
+            <Link to="/about"></Link>about
+          </li>
+          <li>
+            <Link to="/projects"></Link>projects
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
+    </>
+  );
+}
+
+export default App
+
+****************************************
+
