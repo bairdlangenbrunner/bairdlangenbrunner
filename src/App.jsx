@@ -19,6 +19,9 @@ function App() {
           <li>
             <Link to="/projects"></Link>projects
           </li>
+          <li>
+            <Link to="https://isthisinteresting.bairdlangenbrunner.com/">interesting</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
