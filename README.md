@@ -1,8 +1,26 @@
-# React + Vite
+# personal website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+following instructions [here](https://www.hostinger.com/tutorials/what-is-react)
 
-Currently, two official plugins are available:
+## first test and build React site locally
+to run it locally:
+```
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+to build it locally
+```
+npm run build
+```
+
+## ```ssh``` into hostinger
+ssh into hostinger with:
+```
+ssh -p 65002 u381663177@82.180.172.10
+```
+
+site contents are in this folder:
+```
+/home/u381663177/domains/bairdlangenbrunner.com/public_html
+```
+
