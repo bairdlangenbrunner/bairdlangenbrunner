@@ -9,13 +9,19 @@
 @layer base {
 
   .page-outline-div {
+    /* background-color: pink; */
     @apply flex;
     @apply flex-col;
-    @apply w-[80vw];
-    @apply min-h-[90vh];
+    @apply w-full;
+    @apply sm:w-[80%];
+    @apply h-screen;
+    @apply sm:min-h-[90vh];
     @apply mx-auto;
-    @apply my-[30px];
-    border: solid magenta 2px;
+    @apply sm:my-[30px];
+    @apply border-[magenta];
+    @apply border-[4px];
+    @apply sm:border-[2px];
+    /* @apply overflow-hidden; */
   }
 
   .page-content-div {
@@ -37,46 +43,68 @@
     /* @apply items-center; */
     @apply text-sm;
     @apply text-right;
-    @apply pr-[7px];
-    @apply pb-[3px];
+    @apply pr-[20px];
+    @apply pb-[15px];
     @apply text-neutral-900;
   }
 
   .header-div {
     display: flex;
     justify-content: flex-end;
-    z-index: 5
-  }
-  .header-div a {
-    cursor: pointer;
-    color: var(--gray-dark);
-    text-decoration: none;
-  }
-
-  .header-div a:hover {
-    text-shadow: -4px 0px magenta, -5.5px 0px yellow, -7px 0px cyan;
-    @apply text-neutral-900;
+    z-index: 5;
+    /* @apply bg-pink-300; */
   }
 
   .header-content {
-    display:flex;
-    padding-top: 5px;
-    padding-right: 13px;
-    padding-bottom: 5px;
-    gap: 13px;
-    @apply sm:text-lg;
+    @apply flex;
+    @apply pt-[10px];
+    @apply sm:pt-[25px];
+    @apply pr-[15px];
+    @apply sm:pr-[35px];
+    @apply gap-[13px];
+    @apply sm:gap-[20px];
+    /* @apply sm:text-lg; */
+  }
+
+  .header-icons {
+    @apply size-[1.5rem];
+    @apply sm:size-[1.75rem];
+    /* @apply bg-white; */
+  }
+  .header-icons:hover {
+    stroke: magenta;
+  }
+
+  .hover-bubble {
+    position:relative;
+    /* display: inline-block; */
+    /* background-color: pink; */
+    /* display: flex; */
+    /* flex-direction: column; */
+  }
+
+  .hover-bubble-text {
+    visibility: hidden;
+    @apply text-[magenta];
+    @apply text-opacity-50;
+    @apply text-xs;
+    position: absolute;
+    bottom: -20px;
+    z-index: 5;
+    }
+    
+  .hover-bubble:hover .hover-bubble-text {
+    /* visibility: visible; */
   }
 
   .title-home {
-    /* @apply hidden; */
-    @apply text-[5rem];
+    @apply text-[4.25rem];
     @apply sm:text-[7rem];
-    @apply md:text-[9rem];
     @apply tracking-[-0.5rem];
     width: 100%;
     overflow-wrap: break-word;
     font-weight: normal;
-    line-height: 0.6em;
+    @apply leading-[0.56em];
     color: transparent;
     font-weight: 700;
     -webkit-text-stroke: 2px rgb(23 23 23);
@@ -84,34 +112,38 @@
 
   .title-away {
     font-weight: 700;
-    @apply text-[5rem];
+    @apply text-[4.25rem];
     @apply sm:text-[7rem];
     @apply tracking-[-0.75rem];
     width: 100%;
     overflow-wrap: break-word;
-    line-height: 0.8em;
+    @apply leading-[0.56em];
     color: transparent;
     -webkit-text-stroke: 2px rgb(23 23 23)
   }
+
+  article, .title-section {
+    @apply w-[85%];
+    @apply sm:w-[80%];
+  }
+
   .title-section {
     @apply sm:mb-[20px];
     @apply mb-[10px];
     @apply mt-[30px];
-    @apply w-[80%];
     @apply mx-auto;
   }
 
   article {
     @apply font-serif;
-    @apply w-[80%];
     margin: auto;
     margin-top: 0px;
     @apply text-sm;
     @apply sm:text-base;
-    /* @apply text-xs; */
   }
   article p{
     @apply my-[0.9rem];
+    @apply leading-[1.25rem];
   }
   article ul li {
     list-style: none;

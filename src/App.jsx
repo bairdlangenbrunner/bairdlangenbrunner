@@ -11,7 +11,7 @@ function App() {
       <nav className="hidden">
         <ul>
           <li>
-            <Link to="/">home</Link>
+            <Link to="/"></Link>
           </li>
           <li>
             <Link to="/about"></Link>about
@@ -20,7 +20,7 @@ function App() {
             <Link to="/projects"></Link>projects
           </li>
           <li>
-            <Link to="https://isthisinteresting.bairdlangenbrunner.com/">interesting</Link>
+            <Link to="https://isthisinteresting.bairdlangenbrunner.com/"></Link>
           </li>
         </ul>
       </nav>
