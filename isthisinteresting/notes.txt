@@ -1,3 +1,0 @@
-https://tailwindcss.com/docs/guides/vite
-
-rfce at top of vs code
