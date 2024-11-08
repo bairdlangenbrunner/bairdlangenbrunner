@@ -29,11 +29,11 @@ function Projects() {
                   page
                 </li>
                 <li>
-                  I've started a blog called{" "}
+                  I've have a{" "}
                   <Link to="https://isthisinteresting.bairdlangenbrunner.com">
-                    is this interesting
+                    blog
                   </Link>{" "}
-                  that I'm updating these days
+                  that I'm updating — at an admittedly inconsistent clip — these days
                 </li>
               </ul>
             </p>

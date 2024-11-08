@@ -74,3 +74,10 @@ export default App
 
 heroicons
 npm install @heroicons/react
+
+
+****************************************
+
+to run in browser:
+
+npm run dev

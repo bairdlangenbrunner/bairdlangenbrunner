@@ -44,8 +44,8 @@ function About() {
           </p>
           <p>
             I studied geophysics in college and then did graduate work in
-            atmospheric and oceanic science. After about a decade in academia, I
-            shifted to work as an academic editor at{" "}
+            atmospheric and oceanic sciences. After about a decade in academia,
+            I shifted to work as an academic editor at{" "}
             <Link to="https://www.nature.com/nclimate/" target="_blank">
               Nature Climate Change
             </Link>

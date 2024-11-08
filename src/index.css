@@ -23,7 +23,6 @@
     @apply border-[magenta];
     @apply border-[4px];
     @apply sm:border-[2px];
-    /* @apply overflow-hidden; */
   }
 
   .between-header-footer-div {
@@ -39,7 +38,6 @@
     @apply mt-[2rem];
     @apply sm:mt-0;
     @apply w-[100%];
-    /* @apply items-center; */
     @apply text-sm;
     @apply text-right;
     @apply pr-[15px];
