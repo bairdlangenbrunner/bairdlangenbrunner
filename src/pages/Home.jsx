@@ -10,7 +10,7 @@ function Home() {
         <Header />
         <div className="between-header-footer-div">
           <section className="title-section">
-            <h1 className="title-home">Baird Langenbrunner</h1>
+            {/* <h1 className="title-home">Baird Langenbrunner</h1> */}
           </section>
           <Homolosines />
         </div>
