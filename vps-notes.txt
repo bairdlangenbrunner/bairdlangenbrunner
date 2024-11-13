@@ -103,15 +103,12 @@ server {
     server_name 46.202.89.200;
 
     location / {
-        root /var/www/html;
-        index index.html;
         proxy_pass http://localhost:3000;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
         proxy_set_header Host $host;
         proxy_cache_bypass $http_upgrade;
-        try_files $uri $uri/ /index.html;
     }
 }
 
@@ -122,4 +119,28 @@ I didn't delete the default file...
 put site in /var/www/
 (bairdlangenbrunner)
 
-npm install -g pm2  (-g installs it globally, look at npm root -g for more)
+npm install -g pm2  (-g installs it globally, look at npm root -g for)
+
+
+****************************************
+
+trying this now:
+
+server {
+    listen 80;
+    server_name 46.202.89.200;
+
+    location / {
+        root /var/www/bairdlangenbrunner/dist;
+        index index.html;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        try_files $uri $uri/ /index.html;
+    }
+}
+
+this works now, but it's not on pm2
+
