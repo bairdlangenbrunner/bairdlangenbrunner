@@ -19,18 +19,18 @@ function Projects() {
                 <li>
                   You can find work-related stuff, and some personal projects,
                   on my{" "}
-                  <Link to="https://github.com/bairdlangenbrunner">GitHub</Link>
+                  <Link to="https://github.com/bairdlangenbrunner" target="_blank">GitHub</Link>
                 </li>
                 <li>
                   You'll see my academic work on my{" "}
-                  <Link to="https://scholar.google.com/citations?user=QWDQ5fIAAAAJ">
+                  <Link to="https://scholar.google.com/citations?user=QWDQ5fIAAAAJ" target="_blank">
                     Google Scholar
                   </Link>{" "}
                   page
                 </li>
                 <li>
                   I've have a{" "}
-                  <Link to="https://isthisinteresting.bairdlangenbrunner.com">
+                  <Link to="https://isthisinteresting.bairdlangenbrunner.com" target="_blank">
                     blog
                   </Link>{" "}
                   that I'm updating — at an admittedly inconsistent clip — these days
