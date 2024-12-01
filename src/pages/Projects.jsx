@@ -42,7 +42,7 @@ function Projects() {
             <br />
             <h2>
               <span style={{ fontWeight: "bold" }}>
-                a couple (crude) games:
+                Some (at times crude) games:
               </span>
             </h2>
             <li>
