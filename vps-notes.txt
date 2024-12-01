@@ -253,15 +253,12 @@ server {
     server_name 46.202.89.200;
 
     location / {
-        # root /var/www/bairdlangenbrunner/dist;
         proxy_pass http://localhost:8080;
-        # index index.html;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
         proxy_set_header Host $host;
         proxy_cache_bypass $http_upgrade;
-        # try_files $uri $uri/ /index.html;
     }
 }
 
@@ -272,25 +269,39 @@ server {
     server_name 46.202.89.200;
 
     location / {
-	      # root /var/www/bairdlangenbrunner/dist;
 	      proxy_pass http://localhost:8000;
-	      # index index.html;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
         proxy_set_header Host $host;
         proxy_cache_bypass $http_upgrade;
-	      # try_files $uri $uri/ /index.html;
     }
 }
 
+tictacbutthole config: in /etc/nginx/
+server {
+    listen 80;
+    server_name 46.202.89.200;
 
-
+    location / {
+	      proxy_pass http://localhost:8001;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+cd /etc/nginx/sites-available
+vi tictacbutthole.bairdlangenbrunner.conf
+cd sites-enabled/
+ln -s /etc/nginx/sites-available/tictacbutthole.bairdlangenbrunner.conf .
 
 
 
 in bairdlangenbrunner:
 npm run build, npm run dev
+FOR REACT:
 pm2 serve dist 8080 --spa --name "bairdlangenbrunner-on-8080"
 
 in isthisinteresting.bairdlangenbrunner:
@@ -299,3 +310,86 @@ pm2 start npm --name "isthisinteresting.bairdlangenbrunner-on-8000" -- start -- 
 
 pm2 startup
 pm2 save
+
+
+
+
+
+
+https://support.hostinger.com/en/articles/6865487-how-to-install-ssl-on-vps-using-certbot
+
+
+
+ssh root@46.202.89.200
+
+tictacbutthole
+FOR REACT, do serve dist
+in tictacbutthole.bairdlangenbrunner:
+npm install
+npm run build
+npm run dev
+pm2 serve dist 8001 --spa --name "tictacbutthole.bairdlangenbrunner-on-8001"
+pm2 save
+
+
+
+
+
+
+isthisinteresting.bairdlangenbrunner
+server {
+    server_name isthisinteresting.bairdlangenbrunner.com;
+
+    location / {
+	  proxy_pass http://localhost:8000;
+
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+
+    }
+
+
+    isthisinteresting.bairdlangenbrunner
+server {
+    server_name tictacbutthole.bairdlangenbrunner.com;
+    return 301 bairdlangenbrunner.com/ttb;
+
+    location / {
+	  proxy_pass http://localhost:8001;
+
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+
+    }
+
+    ****************************************
+    doing for get10 now
+
+get10 config: in /etc/nginx/
+server {
+    listen 80;
+    // server_name get10.bairdlangenbrunner.com;
+    return 301 https://bairdlangenbrunner.com/get10;
+
+    location / {
+	      proxy_pass http://localhost:8002;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+
+git clone https://github.com/bairdlangenbrunner/get10.git .
+
+npm install
+
+npm run dev works ok
+pm2 serve dist 8002 --spa --name "get10-on-8002"
