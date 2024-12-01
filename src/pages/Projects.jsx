@@ -39,10 +39,25 @@ function Projects() {
               that I'm updating — at an admittedly inconsistent clip — these
               days
             </li>
-            <br/>
-            <h2><span style={{fontWeight: 'bold'}}>a couple (crude) games:</span></h2>
-            <li><Link to="https://tictacbutthole.bairdlangenbrunner.com" garget="_blank">ttb</Link></li>
-            <li><Link to="https://get10.bairdlangenbrunner.com" garget="_blank">get10</Link></li>
+            <br />
+            <h2>
+              <span style={{ fontWeight: "bold" }}>
+                a couple (crude) games:
+              </span>
+            </h2>
+            <li>
+              <Link
+                to="https://tictacbutthole.bairdlangenbrunner.com"
+                garget="_blank"
+              >
+                ttb
+              </Link>
+            </li>
+            <li>
+              <Link to="https://get10.bairdlangenbrunner.com" garget="_blank">
+                get10
+              </Link>
+            </li>
           </ul>
         </p>
       </article>
