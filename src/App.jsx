@@ -1,36 +1,17 @@
-import { useState } from "react";
 import "./index.css";
-import { Link, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import SiteRoutes from "./components/SiteRoutes/SiteRoutes";
 
-function App() {
+export default function App() {
   return (
-    <>
-      <nav className="hidden">
-        <ul>
-          <li>
-            <Link to="/"></Link>
-          </li>
-          <li>
-            <Link to="/about"></Link>about
-          </li>
-          <li>
-            <Link to="/projects"></Link>projects
-          </li>
-          <li>
-            <Link to="https://isthisinteresting.bairdlangenbrunner.com/"></Link>
-          </li>
-        </ul>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
-    </>
+    <div className="page-outline-div">
+      <Header />
+      <div className="between-header-footer-div">
+        {/* place SiteRoutes here, where the content of the page will change, i.e., between the header and footer, and within the div for the page content */}
+        <SiteRoutes />
+      </div>
+      <Footer />
+    </div>
   );
 }
-
-export default App;
