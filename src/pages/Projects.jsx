@@ -48,13 +48,13 @@ function Projects() {
             <li>
               <Link
                 to="https://tictacbutthole.bairdlangenbrunner.com"
-                garget="_blank"
+                target="_blank"
               >
                 ttb
               </Link>
             </li>
             <li>
-              <Link to="https://get10.bairdlangenbrunner.com" garget="_blank">
+              <Link to="https://get10.bairdlangenbrunner.com" target="_blank">
                 get10
               </Link>
             </li>
