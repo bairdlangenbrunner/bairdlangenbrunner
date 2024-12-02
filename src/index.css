@@ -8,15 +8,14 @@
 
 @layer base {
   .page-outline-div {
-    /* background-color: pink; */
     @apply flex;
     @apply flex-col;
 
     @apply w-full;
     @apply sm:w-[80%];
 
-    @apply min-h-screen;
-    @apply sm:min-h-[90vh];
+    @apply h-screen;
+    @apply sm:h-[90vh];
 
     @apply mx-auto;
     @apply sm:my-[30px];
@@ -28,7 +27,7 @@
   .between-header-footer-div {
     @apply flex;
     @apply flex-col;
-    @apply flex-grow; /* crucial bit for footer to go to bottom */
+    @apply flex-grow; /*crucial bit for footer to go to bottom*/
   }
 
   .footer-div {
