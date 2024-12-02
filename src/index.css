@@ -18,6 +18,7 @@
     @apply sm:h-[90vh];
 
     @apply mx-auto;
+    @apply my-0;
     @apply sm:my-[30px];
     @apply border-[magenta];
     @apply border-[4px];

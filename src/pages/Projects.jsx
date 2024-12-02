@@ -19,7 +19,7 @@ function Projects() {
               </Link>
             </li>
             <li>
-              You'll see my academic work on my{" "}
+              My academic work is on my{" "}
               <Link
                 to="https://scholar.google.com/citations?user=QWDQ5fIAAAAJ"
                 target="_blank"
