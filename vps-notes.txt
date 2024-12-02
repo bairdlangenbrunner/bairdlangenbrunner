@@ -393,3 +393,42 @@ npm install
 
 npm run dev works ok
 pm2 serve dist 8002 --spa --name "get10-on-8002"
+
+
+
+
+****************************************
+SETTING UP WORD GAME
+****************************************
+ssh root@46.202.89.200
+cd /var/www/
+mkdir word.bairdlangenbrunner
+cd word.bairdlangenbrunner
+git clone https://github.com/bairdlangenbrunner/word.git .
+npm install
+npm run build
+cd /etc/nginx/sites-available/
+
+vi word.bairdlangenbrunner.conf
+server {
+    listen 80;
+    server_name word.bairdlangenbrunner.com;
+
+    location / {
+	      proxy_pass http://localhost:8003;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+
+ln -s /etc/nginx/sites-available/word.bairdlangenbrunner.conf /etc/nginx/sites-enabled/
+
+cd /var/www/word.bairdlangenbrunner/
+pm2 serve dist 8003 --spa --name "word-on-8003"
+pm2 save
+
+sudo certbot --nginx
+echo "0 0,12 * * * root /opt/certbot/bin/python -c 'import random; import time; time.sleep(random.random() * 3600)' && sudo certbot renew -q" | sudo tee -a /etc/crontab > /dev/null

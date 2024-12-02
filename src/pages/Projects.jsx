@@ -58,6 +58,11 @@ function Projects() {
                 get10
               </Link>
             </li>
+            <li>
+              <Link to="https://word.bairdlangenbrunner.com" target="_blank">
+                word
+              </Link>
+            </li>
           </ul>
         </p>
       </article>
