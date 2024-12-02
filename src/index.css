@@ -35,8 +35,8 @@
   }
 
   .footer-content {
-    @apply mt-[2rem];
-    @apply sm:mt-0;
+    /* @apply mt-[2rem]; */
+    /* @apply sm:mt-0; */
     @apply w-[100%];
     @apply text-sm;
     @apply text-right;
