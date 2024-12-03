@@ -28,7 +28,7 @@
   .between-header-footer-div {
     @apply flex;
     @apply flex-col;
-    @apply flex-grow; /*crucial bit for footer to go to bottom*/
+    @apply flex-grow; /*crucial bit for footer to go to bottom */
   }
 
   .footer-div {
