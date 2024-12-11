@@ -1,5 +1,3 @@
-@import "tailwindcss-colors.css";
-
 *,
 :before,
 :after {
@@ -28,22 +26,14 @@ a {
 }
 
 a:hover {
-  color: var(--stone-700);
+  color: #737373; /* Neutral hover color */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-button,
-input,
-textarea,
-select {
+button, input, textarea, select {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -62,10 +52,7 @@ button:disabled {
   cursor: not-allowed;
 }
 
-img,
-video,
-canvas,
-svg {
+img, video, canvas, svg {
   display: block;
   max-width: 100%;
   height: auto;
@@ -75,9 +62,7 @@ svg {
   display: none;
 }
 
-/* **************************************** */
-/* layout */
-/* **************************************** */
+/* Layout */
 .page-outline-div {
   display: flex;
   flex-direction: column;
@@ -106,35 +91,26 @@ svg {
   display: flex;
   justify-content: flex-end;
   z-index: 5;
-  /* background-color: pink; */
 }
 
 .header-content {
   display: flex;
-  padding: 15px 15px;
-  gap: 10px;
+  padding: 10px 15px;
+  gap: 13px;
 }
 
-/* @media (min-width: 640px) {
+@media (min-width: 640px) {
   .header-content {
     padding-top: 15px;
-    gap: 8px; Slightly larger gap for larger screens
+    gap: 15px;
   }
-} */
-
-.header-icons {
-  width: 1.5rem;
-}
-
-.header-content > li {
-  list-style: none;
 }
 
 .footer-content {
   text-align: right;
-  padding: 10px 15px;
-  font-size: 0.75rem; /* Equivalent to text-sm */
-  color: var(--stone-900);
+  padding: 15px;
+  font-size: 0.875rem; /* Equivalent to text-sm */
+  color: #171717; /* Neutral color */
 }
 
 .hover-bubble {
@@ -153,11 +129,8 @@ svg {
   visibility: visible;
 }
 
-/* **************************************** */
-/* typography */
-/* **************************************** */
-.title-home,
-.title-away {
+/* Typography */
+.title-home, .title-away {
   font-size: 4.25rem;
   line-height: 0.56em;
   width: 100%;
@@ -168,8 +141,7 @@ svg {
 }
 
 @media (min-width: 640px) {
-  .title-home,
-  .title-away {
+  .title-home, .title-away {
     font-size: 7rem;
   }
 }
@@ -182,53 +154,60 @@ svg {
   letter-spacing: -0.75rem;
 }
 
-article,
-.title-section {
+article, .title-section {
   width: 85%;
   margin: 30px auto 10px;
 }
 
 @media (min-width: 640px) {
-  article,
-  .title-section {
+  article, .title-section {
     width: 80%;
     margin-bottom: 20px;
   }
 }
 
-p {
+article {
   font-family: Domine, Georgia, serif;
   font-size: 0.875rem;
-  line-height: 1.125rem;
-  margin: 0.9rem 0;
+  line-height: 1.25rem;
 }
 
 @media (min-width: 640px) {
-  p {
-    font-size: 0.9rem;
-    line-height: 1.25rem;
+  article {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
-ul {
+article p {
+  margin: 0.9rem 0;
+}
+
+article ul {
   list-style: none;
   padding: 0;
 }
 
-p ul li {
-  /* margin: 0.25rem 0; */
+article ul li {
+  margin: 0.25rem 0;
 }
 
-p ul li:before {
+article ul li:before {
   content: "+";
-  margin-right: 0.25rem;
+  margin-right: 0.5em;
 }
 
-/* **************************************** */
-/* miscellaneous */
-/* **************************************** */
+a {
+  color: magenta;
+}
+
+a:hover {
+  color: #737373;
+}
+
+/* Miscellaneous */
 .homolosine-div {
-  /* background-color: pink; */
+  background-color: pink;
 }
 
 img {
