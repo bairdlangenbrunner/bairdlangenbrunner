@@ -114,7 +114,7 @@
     @apply leading-[0.56em];
     color: transparent;
     font-weight: 900;
-    -webkit-text-stroke: 2px rgb(23 23 23)
+    -webkit-text-stroke: 2px rgb(23 23 23);
   }
 
   article,
@@ -163,27 +163,32 @@
   }
 
   .homolosine-div {
-    position: relative;
-    width: 100%;
+    /* @apply flex justify-center items-center; */
+    /* height: 100%; */
+    /* position: relative; */
+    /* width: 100%; */
+    /* @apply md:rotate-0; */
+    /* @apply w-full h-auto transform sm:rotate-0 rotate-90 origin-center; */
+    /* overflow: hidden; */
+    background-color: pink;
   }
   #homoC {
     left: 3px;
     top: 0;
     position: absolute;
-    z-index: 2;
-    display: block;
+    /* z-index: 2; */
+    /* display: block; */
   }
   #homoY {
     left: 5px;
     top: 0;
     position: absolute;
-    /* z-index: 1; */
   }
   #homoM {
     left: -4px;
     position: absolute;
     top: 0;
-    z-index: 3;
+    /* z-index: 3; */
   }
   #homoK {
     left: 0px;
