@@ -42,7 +42,7 @@ function About() {
         </p>
         <p>
           I studied geophysics in college and then did graduate work in
-          atmospheric and oceanic sciences. After about a decade in academia, I
+          atmospheric and oceanic science. After about a decade in academia, I
           shifted to work as an academic editor at{" "}
           <Link to="https://www.nature.com/nclimate/" target="_blank">
             Nature Climate Change
@@ -55,7 +55,11 @@ function About() {
           <Link to="https://twitter.com/heyitsbaird" target="_blank">
             @heyitsbaird
           </Link>{" "}
-          on social.
+          on social, and you can find me on LinkedIn{" "}
+          <Link to="https://www.linkedin.com/in/heyitsbaird/" target="_blank">
+            here
+          </Link>
+          .
         </p>
       </article>
     </>

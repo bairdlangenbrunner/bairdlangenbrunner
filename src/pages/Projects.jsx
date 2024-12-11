@@ -40,11 +40,11 @@ function Projects() {
               days
             </li>
             <br />
-            <h2>
+            <p>
               <span style={{ fontWeight: "bold" }}>
                 Some (at times crude) games:
               </span>
-            </h2>
+            </p>
             <li>
               <Link
                 to="https://tictacbutthole.bairdlangenbrunner.com"
