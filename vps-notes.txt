@@ -432,3 +432,24 @@ pm2 save
 
 sudo certbot --nginx
 echo "0 0,12 * * * root /opt/certbot/bin/python -c 'import random; import time; time.sleep(random.random() * 3600)' && sudo certbot renew -q" | sudo tee -a /etc/crontab > /dev/null
+
+#####################
+
+2 May 2025, updating bairdlangenbrunner.com
+
+ssh root@whatever
+cd /var/www
+
+cd into bairdlangenbrunner directory
+git pull origin main
+npm install, npm run build
+
+
+NO
+git clone https://github.com/bairdlangenbrunner/bairdlangenbrunner.git
+cd into it
+npm install
+npm run build
+
+
+pm2 status tells you where sites are running from...
