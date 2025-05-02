@@ -1,17 +1,25 @@
 import "./index.css";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import SiteRoutes from "./components/SiteRoutes/SiteRoutes";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+// import SiteRoutes from "./components/SiteRoutes/SiteRoutes";
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+import Projects from "./pages/Projects.jsx";
+import { Routes, BrowserRouter, Route } from "react-router-dom";
+import Layout from "./components/Layout.jsx";
 
 export default function App() {
   return (
-    <div className="page-outline-div">
-      <Header />
-      <div className="between-header-footer-div">
-        {/* place SiteRoutes here, where the content of the page will change, i.e., between the header and footer, and within the div for the page content */}
-        <SiteRoutes />
-      </div>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      {/* <div className="page-outline-div"> */}
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="projects" element={<Projects />} />
+            </Route>
+          </Routes>
+      {/* </div> */}
+    </BrowserRouter>
   );
 }
