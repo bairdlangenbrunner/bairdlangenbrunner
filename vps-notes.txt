@@ -437,19 +437,11 @@ echo "0 0,12 * * * root /opt/certbot/bin/python -c 'import random; import time; 
 
 2 May 2025, updating bairdlangenbrunner.com
 
-ssh root@whatever
+push changes to git repo...
+
+ssh root@ip address
 cd /var/www
 
 cd into bairdlangenbrunner directory
 git pull origin main
 npm install, npm run build
-
-
-NO
-git clone https://github.com/bairdlangenbrunner/bairdlangenbrunner.git
-cd into it
-npm install
-npm run build
-
-
-pm2 status tells you where sites are running from...
