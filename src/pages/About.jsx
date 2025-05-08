@@ -35,7 +35,7 @@ function About() {
           I believe very strongly in open-source data and software, especially
           when they're leveraged to do cool climate work. I'm interested in maps
           and design, data visualization, and science communication, and I've
-          been teaching myself how to make things online lately.
+          been teaching myself how to make things online lately. Check back here for more things to come.
         </p>
         {/* <p>
           I studied geophysics in college and did graduate work in atmospheric
