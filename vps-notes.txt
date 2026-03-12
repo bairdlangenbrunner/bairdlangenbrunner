@@ -445,3 +445,55 @@ cd /var/www
 cd into bairdlangenbrunner directory
 git pull origin main
 npm install, npm run build
+
+********************
+
+
+
+SETTING UP SCROLL-UP PROJECT
+****************************************
+ssh root@46.202.89.200
+cd /var/www/
+mkdir scroll-up.bairdlangenbrunner
+cd scroll-up.bairdlangenbrunner
+git clone https://github.com/bairdlangenbrunner/scroll-up.git .
+npm install
+npm run build
+cd /etc/nginx/sites-available/
+
+vi scroll-up.bairdlangenbrunner.conf
+server {
+    listen 80;
+    server_name scroll-up.bairdlangenbrunner.com;
+
+    location / {
+	      proxy_pass http://localhost:8004;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+
+ln -s /etc/nginx/sites-available/scroll-up.bairdlangenbrunner.conf /etc/nginx/sites-enabled/
+
+cd /var/www/scroll-up.bairdlangenbrunner/
+pm2 serve dist 8004 --spa --name "scroll-up-on-8004"
+pm2 save
+
+sudo certbot --nginx
+echo "0 0,12 * * * root /opt/certbot/bin/python -c 'import random; import time; time.sleep(random.random() * 3600)' && sudo certbot renew -q" | sudo tee -a /etc/crontab > /dev/null
+
+
+****************************************
+now says
+
+│ id │ name                                            │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼─────────────────────────────────────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 0  │ bairdlangenbrunner-on-8080                      │ default     │ 5.4.3   │ fork    │ 586338   │ 13D    │ 0    │ online    │ 0%       │ 0b       │ root     │ disabled │
+│ 3  │ get10-on-8002                                   │ default     │ 5.4.3   │ fork    │ 586341   │ 13D    │ 0    │ online    │ 0%       │ 0b       │ root     │ disabled │
+│ 1  │ isthisinteresting.bairdlangenbrunner-on-8000    │ default     │ N/A     │ fork    │ 586339   │ 13D    │ 0    │ online    │ 0%       │ 0b       │ root     │ disabled │
+│ 5  │ scroll-up-on-8004                               │ default     │ 5.4.3   │ fork    │ N/A      │ 0s     │ 0    │ online    │ 0%       │ 0b       │ root     │ disabled │
+│ 2  │ tictacbutthole.bairdlangenbrunner-on-8001       │ default     │ 5.4.3   │ fork    │ 586340   │ 13D    │ 0    │ online    │ 0%       │ 0b       │ root     │ disabled │
+│ 4  │ word-on-8003                                    │ default     │ 5.4.3   │ fork    │ 586374   │ 13D    │ 0    │ online    │ 0%       │ 0b       │ root

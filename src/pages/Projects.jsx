@@ -51,7 +51,7 @@ function Projects() {
               ttb
             </Link>
           </li> */}
-          <li>
+          {/* <li>
             <Link to="https://get10.bairdlangenbrunner.com" target="_blank">
               get10
             </Link>
@@ -59,6 +59,11 @@ function Projects() {
           <li>
             <Link to="https://word.bairdlangenbrunner.com" target="_blank">
               word
+            </Link>
+          </li> */}
+                    <li>
+            <Link to="https://scroll-up.bairdlangenbrunner.com" target="_blank">
+              scroll up
             </Link>
           </li>
         </ul>
