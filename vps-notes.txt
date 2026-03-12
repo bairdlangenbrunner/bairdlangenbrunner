@@ -497,3 +497,8 @@ now says
 │ 5  │ scroll-up-on-8004                               │ default     │ 5.4.3   │ fork    │ N/A      │ 0s     │ 0    │ online    │ 0%       │ 0b       │ root     │ disabled │
 │ 2  │ tictacbutthole.bairdlangenbrunner-on-8001       │ default     │ 5.4.3   │ fork    │ 586340   │ 13D    │ 0    │ online    │ 0%       │ 0b       │ root     │ disabled │
 │ 4  │ word-on-8003                                    │ default     │ 5.4.3   │ fork    │ 586374   │ 13D    │ 0    │ online    │ 0%       │ 0b       │ root
+
+
+
+also had to add it into the DNS domains on hostinger's website
+

@@ -34,7 +34,8 @@ function About() {
         <p>
           I believe very strongly in open-source data and software, especially
           when they're leveraged to do cool climate work. I'm interested in maps
-          and design, data visualization, crafting, and science communication.
+          and design, data visualization, making stuff with my hands and
+          computer, and science communication.
         </p>
         <p>I'm based in NYC.</p>
       </section>
