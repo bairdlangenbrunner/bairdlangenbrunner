@@ -43,25 +43,25 @@ function Projects() {
         <br />
         <span style={{ fontWeight: "700" }}>Other things:</span>
         <ul>
-          {/* <li>
+          <li>
             <Link
               to="https://tictacbutthole.bairdlangenbrunner.com"
               target="_blank"
             >
               ttb
             </Link>
-          </li> */}
+          </li>
           {/* <li>
             <Link to="https://get10.bairdlangenbrunner.com" target="_blank">
               get10
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="https://word.bairdlangenbrunner.com" target="_blank">
               word
             </Link>
-          </li> */}
-                    <li>
+          </li>
+          <li>
             <Link to="https://scroll-up.bairdlangenbrunner.com" target="_blank">
               scroll up
             </Link>
