@@ -36,8 +36,8 @@ function Projects() {
               rel="noopener noreferrer"
             >
               blog
-            </a>
-             lately
+            </a>{" "}
+            lately
           </li>
         </ul>
 
