@@ -40,11 +40,15 @@ function Header() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="https://bairdlangenbrunner.com/isthisinteresting">
+            <a
+              href="/isthisinteresting"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="hover-bubble">
                 <PencilSquareIcon className="header-icons" />
               </div>
-            </NavLink>
+            </a>
           </li>
         </ul>
       </nav>

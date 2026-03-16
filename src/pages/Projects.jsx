@@ -30,12 +30,13 @@ function Projects() {
 
           <li>
             I'm also tinkering with an inconsistently updated{" "}
-            <Link
-              to="https://bairdlangenbrunner.com/isthisinteresting"
+            <a
+              href="https://bairdlangenbrunner.com/isthisinteresting"
               target="_blank"
+              rel="noopener noreferrer"
             >
               blog
-            </Link>{" "}
+            </a>
             lately
           </li>
         </ul>
