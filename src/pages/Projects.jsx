@@ -31,7 +31,7 @@ function Projects() {
           <li>
             I'm also tinkering with an inconsistently updated{" "}
             <Link
-              to="https://isthisinteresting.bairdlangenbrunner.com"
+              to="https://bairdlangenbrunner.com/isthisinteresting"
               target="_blank"
             >
               blog
