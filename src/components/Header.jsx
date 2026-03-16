@@ -39,13 +39,13 @@ function Header() {
               <FolderIcon className="header-icons" />
             </NavLink>
           </li>
-          {/* <li>
+          <li>
             <NavLink to="https://isthisinteresting.bairdlangenbrunner.com">
               <div className="hover-bubble">
                 <PencilSquareIcon className="header-icons" />
               </div>
             </NavLink>
-          </li> */}
+          </li>
         </ul>
       </nav>
     </>

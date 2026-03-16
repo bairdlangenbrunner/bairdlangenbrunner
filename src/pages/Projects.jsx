@@ -28,7 +28,7 @@ function Projects() {
             page
           </li>
 
-          {/* <li>
+          <li>
             I'm also tinkering with an inconsistently updated{" "}
             <Link
               to="https://isthisinteresting.bairdlangenbrunner.com"
@@ -37,7 +37,7 @@ function Projects() {
               blog
             </Link>{" "}
             lately
-          </li> */}
+          </li>
         </ul>
 
         <br />

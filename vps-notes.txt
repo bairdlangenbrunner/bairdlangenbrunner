@@ -476,6 +476,10 @@ server {
     }
 }
 
+
+
+
+
 ln -s /etc/nginx/sites-available/scroll-up.bairdlangenbrunner.conf /etc/nginx/sites-enabled/
 
 cd /var/www/scroll-up.bairdlangenbrunner/
