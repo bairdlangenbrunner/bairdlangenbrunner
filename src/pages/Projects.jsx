@@ -37,7 +37,7 @@ function Projects() {
             >
               blog
             </a>
-            lately
+             lately
           </li>
         </ul>
 
