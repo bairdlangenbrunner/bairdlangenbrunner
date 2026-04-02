@@ -67,6 +67,11 @@ function Projects() {
               scroll up
             </Link>
           </li>
+          <li>
+            <Link to="https://projection-explorer.bairdlangenbrunner.com/" target="_blank">
+              projection explorer
+            </Link>
+          </li>
         </ul>
       </section>
     </>
