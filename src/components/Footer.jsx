@@ -1,22 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <>
-      <footer>
-        <div className="footer-content">
-          this site is maintained on github{" "}
-          <Link
-            to="https://github.com/bairdlangenbrunner/bairdlangenbrunner"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            here
-          </Link>
-        </div>
-      </footer>
-    </>
+    <footer>
+      <div className="footer-content">
+        this site is maintained on{" "}
+        <a
+          href="https://github.com/bairdlangenbrunner/bairdlangenbrunner"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+          <span className="sr-only">(opens in new tab)</span>
+        </a>
+      </div>
+    </footer>
   );
 }
 

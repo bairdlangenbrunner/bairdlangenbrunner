@@ -8,12 +8,13 @@ export default function Layout() {
 
   return (
     <div className="app-container-div">
+      <a href="#main-content" className="skip-link">Skip to main content</a>
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       {menuOpen ? null : (
         <>
-          <div className="between-header-footer-div">
+          <main id="main-content" className="between-header-footer-div">
             <Outlet />
-          </div>
+          </main>
           <Footer />
         </>
       )}

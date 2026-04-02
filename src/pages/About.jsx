@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
 
 function About() {
+  useEffect(() => { document.title = "About — Baird Langenbrunner"; }, []);
   return (
     <>
       <div className="div-title">
@@ -12,23 +12,28 @@ function About() {
         <p>Hi, I'm Baird.</p>
         <p>
           I'm a climate scientist working in energy transition research at{" "}
-          <Link to="https://globalenergymonitor.org/" target="_blank">
+          <a href="https://globalenergymonitor.org/" target="_blank" rel="noopener noreferrer">
             Global Energy Monitor
-          </Link>
+            <span className="sr-only">(opens in new tab)</span>
+          </a>
           , where I've managed{" "}
-          <Link
+          <a
+            href="https://globalenergymonitor.org/projects/global-oil-infrastructure-tracker/"
             target="_blank"
-            to="https://globalenergymonitor.org/projects/global-oil-infrastructure-tracker/"
+            rel="noopener noreferrer"
           >
             oil
-          </Link>{" "}
+            <span className="sr-only">(opens in new tab)</span>
+          </a>{" "}
           and{" "}
-          <Link
+          <a
+            href="https://globalenergymonitor.org/projects/global-gas-infrastructure-tracker/"
             target="_blank"
-            to="https://globalenergymonitor.org/projects/global-gas-infrastructure-tracker/"
+            rel="noopener noreferrer"
           >
             gas
-          </Link>{" "}
+            <span className="sr-only">(opens in new tab)</span>
+          </a>{" "}
           infrastructure databases since I joined in 2021.
         </p>
         <p>

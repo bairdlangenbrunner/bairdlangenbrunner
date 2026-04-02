@@ -134,8 +134,11 @@ export default function Homolosines() {
     }
   }, []);
 
-  // Animate: slow wandering rotation
+  // Animate: slow wandering rotation (respects prefers-reduced-motion)
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
     const animate = (t) => {
       const proj = projRef.current;
       if (proj) {
@@ -170,7 +173,7 @@ export default function Homolosines() {
 
   return (
     <div className="homolosine-div" ref={containerRef}>
-      <svg ref={svgRef} />
+      <svg ref={svgRef} role="img" aria-label="Animated world map projection" />
     </div>
   );
 }

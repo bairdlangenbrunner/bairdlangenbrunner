@@ -38,7 +38,7 @@ html, body {
 }
 
 a {
-  color: var(--lime-700);
+  color: var(--lime-800);
   text-decoration: underline;
 }
 /* a:hover {
@@ -127,7 +127,8 @@ a.active-link {
   transition: opacity 0.15s ease;
 }
 
-.header-content a[data-tooltip]:hover::after {
+.header-content a[data-tooltip]:hover::after,
+.header-content a[data-tooltip]:focus-visible::after {
   opacity: 1;
 }
 
@@ -319,4 +320,39 @@ section li:before {
 img {
   border: none;
   /* display: block; */
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--lime-700);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 100;
+  padding: 8px 16px;
+  background: var(--warmGray-950);
+  color: white;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.skip-link:focus {
+  top: 0;
 }

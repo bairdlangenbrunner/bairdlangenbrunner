@@ -1,9 +1,7 @@
-import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
 
 function Projects() {
+  useEffect(() => { document.title = "Projects — Baird Langenbrunner"; }, []);
   return (
     <>
       <div className="div-title">
@@ -13,18 +11,21 @@ function Projects() {
         <ul>
           <li>
             You can find work-related stuff, and some personal projects, on my{" "}
-            <Link to="https://github.com/bairdlangenbrunner" target="_blank">
+            <a href="https://github.com/bairdlangenbrunner" target="_blank" rel="noopener noreferrer">
               GitHub
-            </Link>
+              <span className="sr-only">(opens in new tab)</span>
+            </a>
           </li>
           <li>
             My academic work is on my{" "}
-            <Link
-              to="https://scholar.google.com/citations?user=QWDQ5fIAAAAJ"
+            <a
+              href="https://scholar.google.com/citations?user=QWDQ5fIAAAAJ"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Google Scholar
-            </Link>{" "}
+              <span className="sr-only">(opens in new tab)</span>
+            </a>{" "}
             page
           </li>
 
@@ -36,6 +37,7 @@ function Projects() {
               rel="noopener noreferrer"
             >
               blog
+              <span className="sr-only">(opens in new tab)</span>
             </a>{" "}
             lately
           </li>
@@ -45,32 +47,28 @@ function Projects() {
         <span style={{ fontWeight: "700" }}>Other things:</span>
         <ul>
           <li>
-            <Link
-              to="https://tictacbutthole.bairdlangenbrunner.com"
-              target="_blank"
-            >
+            <a href="https://tictacbutthole.bairdlangenbrunner.com" target="_blank" rel="noopener noreferrer">
               ttb
-            </Link>
+              <span className="sr-only">(opens in new tab)</span>
+            </a>
           </li>
-          {/* <li>
-            <Link to="https://get10.bairdlangenbrunner.com" target="_blank">
-              get10
-            </Link>
-          </li> */}
           <li>
-            <Link to="https://word.bairdlangenbrunner.com" target="_blank">
+            <a href="https://word.bairdlangenbrunner.com" target="_blank" rel="noopener noreferrer">
               word
-            </Link>
+              <span className="sr-only">(opens in new tab)</span>
+            </a>
           </li>
           <li>
-            <Link to="https://scroll-up.bairdlangenbrunner.com" target="_blank">
+            <a href="https://scroll-up.bairdlangenbrunner.com" target="_blank" rel="noopener noreferrer">
               scroll up
-            </Link>
+              <span className="sr-only">(opens in new tab)</span>
+            </a>
           </li>
           <li>
-            <Link to="https://projection-explorer.bairdlangenbrunner.com/" target="_blank">
+            <a href="https://projection-explorer.bairdlangenbrunner.com/" target="_blank" rel="noopener noreferrer">
               projection explorer
-            </Link>
+              <span className="sr-only">(opens in new tab)</span>
+            </a>
           </li>
         </ul>
       </section>
