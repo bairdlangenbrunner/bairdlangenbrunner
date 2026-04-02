@@ -107,6 +107,116 @@ a.active-link {
   list-style: none;
 }
 
+/* Header tooltip */
+.header-content a[data-tooltip] {
+  position: relative;
+}
+
+.header-content a[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  color: var(--warmGray-950);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.header-content a[data-tooltip]:hover::after {
+  opacity: 1;
+}
+
+/* Hamburger button — mobile only */
+.hamburger-btn {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--warmGray-950);
+  padding: 0;
+}
+
+/* Hide hamburger on desktop, hide desktop icons on mobile */
+@media (min-width: 640px) {
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+.header-desktop {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .header-desktop {
+    display: flex;
+  }
+}
+
+/* Mobile menu panel */
+.menu-panel {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  color: var(--lime-700);
+}
+
+@media (min-width: 640px) {
+  .menu-panel {
+    display: none;
+  }
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-links li {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-links li {
+  padding-left: 0;
+}
+
+.menu-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  background: var(--warmGray-950);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 18px;
+  border-radius: 999px;
+}
+
+.menu-links a:hover {
+  background: var(--warmGray-800);
+  color: white;
+}
+
+.menu-links a.active {
+  background: var(--lime-700);
+  color: white;
+}
+
+.menu-links a.active:hover {
+  background: var(--lime-600);
+  color: white;
+}
+
 footer {
   margin-top: auto;
   display: flex;
@@ -150,21 +260,28 @@ footer {
 }
 
 section,
-.div-title,
-.homolosine-div {
+.div-title {
   width: 85%;
+  max-width: 524px;
+  margin: 30px auto 10px;
+}
+.homolosine-div {
+  width: 95%;
   max-width: 524px;
   margin: 30px auto 10px;
 }
 @media (min-width: 640px) {
   section,
-  .div-title,
+  .div-title {
+    width: 80%;
+  }
   .homolosine-div {
     width: 80%;
   }
 }
 .homolosine-div {
   margin-block: auto;
+  overflow: hidden;
 }
 
 p,
