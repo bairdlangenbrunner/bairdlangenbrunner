@@ -67,10 +67,14 @@ function validatePostDetails(
   };
 }
 
+function stripLeadingNumbers(folderName: string): string {
+  return folderName.replace(/^\d+-/, "");
+}
+
 async function getPostSlugs() {
   const dirents = await readdir(POSTS_DIR, { withFileTypes: true });
 
-  const slugs = await Promise.all(
+  const entries = await Promise.all(
     dirents
       .filter((dirent) => dirent.isDirectory())
       .map(async ({ name }) => {
@@ -78,23 +82,25 @@ async function getPostSlugs() {
 
         try {
           await access(mdxPath);
-          return name;
+          return { folder: name, slug: stripLeadingNumbers(name) };
         } catch {
           return null;
         }
       })
   );
 
-  return slugs.filter((slug): slug is string => slug !== null);
+  return entries.filter(
+    (entry): entry is { folder: string; slug: string } => entry !== null
+  );
 }
 
 export async function getPosts(): Promise<PostMetadata[]> {
-  const slugs = await getPostSlugs();
+  const entries = await getPostSlugs();
 
   const posts = await Promise.all(
-    slugs.map(async (slug) => {
-      const sourcePath = path.join(POSTS_DIR, slug, "page.mdx");
-      const postModule = (await import(`@/app/notes/(posts)/${slug}/page.mdx`)) as PostModule;
+    entries.map(async ({ folder, slug }) => {
+      const sourcePath = path.join(POSTS_DIR, folder, "page.mdx");
+      const postModule = (await import(`@/app/notes/(posts)/${folder}/page.mdx`)) as PostModule;
 
       if (!("postDetails" in postModule) || typeof postModule.postDetails !== "object" || postModule.postDetails === null) {
         throw new Error(`${sourcePath}: missing exported "postDetails" object.`);
