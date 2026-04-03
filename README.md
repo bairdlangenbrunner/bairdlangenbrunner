@@ -1,38 +1,55 @@
-# bairdlangenbrunner
+# bairdlangenbrunner.com
 
-Personal website for Baird Langenbrunner — climate scientist, data visualizer, and map enthusiast.
+Personal website and notes for Baird Langenbrunner, built with Next.js.
 
-Built with React, Vite, and D3.
+## Stack
 
-## Pages
+- **Framework**: Next.js 16 (App Router)
+- **Styling**: Tailwind CSS 3 + custom CSS
+- **Content**: MDX via `@next/mdx`
+- **Homepage**: Animated Interrupted Goode Homolosine projection using D3
+- **Icons**: Heroicons
 
-- **/** — Home, featuring an animated map projection
-- **/about** — Bio and background
-- **/projects** — Links to side projects and external work
+## Routes
 
-## The animated map
-
-The home page displays an SVG world map rendered with D3's geo projection library. On each page load, a projection is randomly selected from a configurable list in `src/lib/projections.js` (currently set to Interrupted Goode Homolosine, but others like Baker, Collignon, Gingery, etc. can be toggled on).
-
-The map continuously rotates with a slow, organic wandering motion. This is driven by pseudo-Perlin noise — specifically, two independent noise functions (one for longitude, one for latitude) each built from 5 layered sine waves with randomized frequencies, amplitudes, and phase offsets. The sum of these sine layers produces smooth, non-repeating drift that makes the continents appear to ooze around inside the projection. Each page load seeds new random parameters, so the motion pattern is always unique.
-
-The animation runs via `requestAnimationFrame`, updating the projection's rotation and re-rendering the SVG paths each frame. Land geometry comes from a TopoJSON world atlas loaded once on mount. The map also responds to window resizes, refitting the projection to the container while preserving its current rotation.
-
-Key files:
-
-- `src/components/Homolosines.jsx` — Map component, animation loop, and noise functions
-- `src/lib/projections.js` — Projection definitions (comment/uncomment to enable)
+| Path | Description |
+|------|-------------|
+| `/` | Homepage with animated globe |
+| `/about` | About page |
+| `/projects` | Projects and links |
+| `/notes` | Notes home (latest post) |
+| `/notes/archive` | All published notes |
+| `/notes/{slug}` | Individual note/post |
 
 ## Development
 
-```
+```bash
 npm install
 npm run dev
 ```
 
-## Build
+## Build & Deploy
 
-```
+```bash
 npm run build
-npm run preview
+npm start -- --port 8000
 ```
+
+Runs as a single pm2 process on the VPS with Nginx proxying all traffic to port 8000.
+
+## Notes (posts)
+
+Notes are MDX files in `app/notes/(posts)/NNN-slug/page.mdx`. Each exports a `postDetails` object:
+
+```js
+export const postDetails = {
+  title: "Post title",
+  standfirst: "Short description",
+  author: "Baird Langenbrunner",
+  publishDate: "2024-06-12",
+  tags: ["tag1", "tag2"],
+  published: true,
+};
+```
+
+Set `published: false` to hide a note from the site.
