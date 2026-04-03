@@ -1,0 +1,27 @@
+export const postDetails = {
+  title: "Projection explorer",
+  standfirst:
+    "I built a tool to explore the distortions of different map projections.",
+  author: "Baird Langenbrunner",
+  publishDate: "2026-04-03",
+  tags: ["science", "explainer", "personal"],
+  published: true,
+};
+
+import PostHeading from "@/app/components/postheading.tsx";
+
+<PostHeading metadata={postDetails} />
+
+TL;DR: check out [Projection Explorer](https://projection-explorer.bairdlangenbrunner.com/), a tool to explore the distortions of map projections.
+
+I have a long-standing obsession with maps. I love looking at them, learning how to read them, and understanding how they work. One thing that has always fascinated me is the concept of map projections — the mathematical transformations that allow us to represent the 3D surface of the Earth on a 2D plane.
+
+The problem is that all map projections introduce some kind of distortion, whether it's in shape, area, distance, or direction. This means that no matter which projection you choose, you're always sacrificing some aspect of the Earth's geometry. I wanted to find a way to visualize and explore these distortions in an interactive way. Inspired by the work of cartographers and geographers, I've built a tool (leaning heavily on Claude) that allows users to compare different map projections and see how they distort the Earth's surface.
+
+I want to explore some other more artful ways of viewing this distortion as well, but for now, the tool allows you to select from a variety of projections and see how they affect the shape and area of different regions on the map.
+
+I hope you like it; feedback welcome if you have any. The code is on GitHub [here](https://github.com/bairdlangenbrunner/projection-explorer).
+
+<br />
+<br />
+<br />
