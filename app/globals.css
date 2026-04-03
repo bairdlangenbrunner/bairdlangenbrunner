@@ -293,6 +293,9 @@
     .div-title {
       width: 80%;
     }
+    .div-title {
+      margin: 30px auto 10px;
+    }
     .homolosine-div {
       width: 80%;
     }
