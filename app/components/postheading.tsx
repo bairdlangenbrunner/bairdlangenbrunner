@@ -10,7 +10,7 @@ const PostHeading = ({ metadata }: { metadata: PostMetadata }) => {
         {metadata.standfirst}
       </h2>
       <div className="flex justify-between text-xs text-stone-400 mt-4">
-        <span>{formatDateNoWeekday(metadata.publishDate)}</span>
+        <time dateTime={metadata.publishDate}>{formatDateNoWeekday(metadata.publishDate)}</time>
         <span>{metadata.author}</span>
       </div>
     </div>

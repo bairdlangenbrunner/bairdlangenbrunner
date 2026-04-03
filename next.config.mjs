@@ -25,7 +25,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'lh3.googleusercontent.com' },
       { protocol: 'https', hostname: 'cdn.jsdelivr.net' },
     ],
-    unoptimized: true
+    unoptimized: false
   },
   async redirects() {
     return [

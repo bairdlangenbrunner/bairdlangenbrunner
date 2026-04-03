@@ -4,7 +4,6 @@
 
 /* ===== CSS CUSTOM PROPERTIES ===== */
 :root {
-  --vh: 1vh;
   --black: #000;
   --white: #fff;
   --stone-50: #fafaf9;
@@ -357,34 +356,16 @@
   }
 
   /* ===== BLOG-SPECIFIC WIDTHS ===== */
-  .navbar-footer-widths {
-    width: 85%;
-    max-width: 524px;
-  }
-
-  @media (min-width: 640px) {
-    .navbar-footer-widths {
-      width: 80%;
-    }
-  }
-
-  .paragraph-widths {
-    width: 85%;
-    max-width: 524px;
-  }
-
-  @media (min-width: 640px) {
-    .paragraph-widths {
-      width: 80%;
-    }
-  }
-
+  .navbar-footer-widths,
+  .paragraph-widths,
   .image-widths {
     width: 85%;
     max-width: 524px;
   }
 
   @media (min-width: 640px) {
+    .navbar-footer-widths,
+    .paragraph-widths,
     .image-widths {
       width: 80%;
     }
@@ -396,7 +377,7 @@
     @apply rounded-lg;
     @apply paragraph-widths;
     @apply mx-auto;
-    overflow: scroll;
+    overflow: auto;
   }
 
   /* ===== MISCELLANEOUS ===== */
@@ -405,18 +386,6 @@
   }
 
   /* ===== ACCESSIBILITY ===== */
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-
   a:focus-visible,
   button:focus-visible {
     outline: 2px solid var(--lime-700);

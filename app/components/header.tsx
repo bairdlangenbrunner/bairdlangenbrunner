@@ -33,7 +33,7 @@ export default function Header({
 
   useEffect(() => setMounted(true), []);
 
-  const closeMenu = useCallback(() => setMenuOpen(false), []);
+  const closeMenu = useCallback(() => setMenuOpen(false), [setMenuOpen]);
 
   const isActive = (href: string, exact?: boolean) => {
     if (!mounted) return false;
@@ -41,6 +41,7 @@ export default function Header({
     return pathname === href || pathname.startsWith(href + "/");
   };
 
+  // Escape to close + focus trap
   useEffect(() => {
     if (!menuOpen) return;
 
@@ -48,12 +49,39 @@ export default function Header({
       if (e.key === "Escape") {
         closeMenu();
         hamburgerRef.current?.focus();
+        return;
+      }
+
+      if (e.key === "Tab" && menuPanelRef.current) {
+        const focusable = menuPanelRef.current.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled])'
+        );
+        if (focusable.length === 0) return;
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
       }
     };
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [menuOpen, closeMenu]);
+
+  // Move focus into menu when it opens
+  useEffect(() => {
+    if (menuOpen && menuPanelRef.current) {
+      const firstLink = menuPanelRef.current.querySelector<HTMLElement>('a[href]');
+      firstLink?.focus();
+    }
+  }, [menuOpen]);
 
   return (
     <>
@@ -92,14 +120,13 @@ export default function Header({
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="menu-panel" ref={menuPanelRef} role="menu">
+        <nav className="menu-panel" ref={menuPanelRef} aria-label="Mobile navigation">
           <ul className="menu-links">
             {navItems.map((item) => (
-              <li key={item.name} role="none">
+              <li key={item.name}>
                 <Link
                   href={item.href}
                   onClick={closeMenu}
-                  role="menuitem"
                   className={isActive(item.href, item.exact) ? "active" : ""}
                 >
                   <item.icon className="header-icons" aria-hidden="true" />
@@ -108,7 +135,7 @@ export default function Header({
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
       )}
     </>
   );

@@ -21,7 +21,7 @@ export default async function Home() {
                     {title}
                   </Link>
                   {" – "}
-                  {formatDateISO(publishDate)}
+                  <time dateTime={publishDate}>{formatDateISO(publishDate)}</time>
                 </li>
               ))}
             </ul>

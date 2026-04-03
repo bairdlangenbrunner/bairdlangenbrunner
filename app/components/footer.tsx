@@ -1,8 +1,8 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = (props: React.HTMLAttributes<HTMLElement>) => {
   return (
-    <footer>
+    <footer {...props}>
       <div className="footer-content">
         this site is maintained on GitHub{" "}
         <a

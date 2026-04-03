@@ -28,7 +28,7 @@ export default async function ArchivePage() {
                   {title}
                 </Link>
                 <div className="text-sm sm:text-base">
-                  {formatDate(publishDate)}
+                  <time dateTime={publishDate}>{formatDate(publishDate)}</time>
                 </div>
               </li>
             ))}
