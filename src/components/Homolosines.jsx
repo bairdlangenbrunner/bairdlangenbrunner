@@ -3,8 +3,9 @@ import * as d3 from 'd3-geo';
 import { select } from 'd3-selection';
 import * as topojson from 'topojson-client';
 import { projections } from '../lib/projections';
+import landTopo from 'world-atlas/land-110m.json';
 
-const WORLD_URL = 'https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json';
+const worldLand = topojson.feature(landTopo, landTopo.objects.land);
 const randomIndex = Math.floor(Math.random() * projections.length);
 
 // Smooth wandering noise from layered sines with random phases
@@ -24,7 +25,6 @@ const wanderφ = makeWander();
 export default function Homolosines() {
   const containerRef = useRef(null);
   const svgRef = useRef(null);
-  const worldRef = useRef(null);
   const projRef = useRef(null);
   const pathRef = useRef(null);
   const rafRef = useRef(null);
@@ -50,9 +50,7 @@ export default function Homolosines() {
 
     root.select('.graticule-path').attr('d', path(d3.geoGraticule().step([20, 20])()));
 
-    if (worldRef.current) {
-      root.select('.land-path').attr('d', path(worldRef.current));
-    }
+    root.select('.land-path').attr('d', path(worldLand));
   }, []);
 
   const renderMap = useCallback(() => {
@@ -123,15 +121,13 @@ export default function Homolosines() {
       .attr('stroke-width', 1);
 
     // Land
-    if (worldRef.current) {
-      clipped
-        .append('path')
-        .attr('class', 'land-path')
-        .datum(worldRef.current)
-        .attr('d', path)
-        .attr('fill', 'var(--warmGray-950)')
-        .attr('stroke', 'none');
-    }
+    clipped
+      .append('path')
+      .attr('class', 'land-path')
+      .datum(worldLand)
+      .attr('d', path)
+      .attr('fill', 'var(--warmGray-950)')
+      .attr('stroke', 'none');
   }, []);
 
   // Animate: slow wandering rotation (respects prefers-reduced-motion)
@@ -152,15 +148,10 @@ export default function Homolosines() {
     return () => cancelAnimationFrame(rafRef.current);
   }, [updatePaths]);
 
-  // Load world data once
+  // Initial render
   useEffect(() => {
-    fetch(WORLD_URL)
-      .then((r) => r.json())
-      .then((topo) => {
-        worldRef.current = topojson.feature(topo, topo.objects.land);
-        renderMap();
-      });
-  }, []);
+    renderMap();
+  }, [renderMap]);
 
   // Re-render on resize
   useEffect(() => {
